@@ -1,0 +1,27 @@
+{
+  "name": "aueron-remote",
+  "version": "0.2.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Centro personale per desktop remoto, terminale e file, basato su MeshCentral",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "configure": "node scripts/configure.mjs",
+    "start": "node node_modules/meshcentral --datapath=runtime/meshcentral-data --filespath=runtime/meshcentral-files --logpath=runtime/meshcentral-data",
+    "meshctrl": "node node_modules/meshcentral/meshctrl.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "loadavg-windows": "1.1.1",
+    "meshcentral": "1.2.5",
+    "node-windows": "1.0.0-beta.8",
+    "zod": "4.6.5"
+  },
+  "overrides": {
+    "qs": "6.16.0"
+  }
+}
